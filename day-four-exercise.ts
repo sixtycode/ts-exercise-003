@@ -166,15 +166,15 @@ if (_numone < _numtwo && _numone < _numthree) {
  *  ○ Example : “hello” → 1
  */
 const _inputType: string = "hello";
-/** const _inputType: number = 123;
- * const _inputType: null = null;
- */
+// const _inputType: number = 123;
+// const _inputType: boolean = true;
+
 if (typeof _inputType === typeof "") {
   console.log(`${_inputType} -> 1`);
 } else if (typeof _inputType === typeof 0) {
   console.log(`${_inputType} -> 2`);
 } else {
-  console.log(3);
+  console.log(`typeof ${typeof _inputType} value ${_inputType} -> 3`);
 }
 
 /**  ● Write a code to change every letter a into * from a string of input
