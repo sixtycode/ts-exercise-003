@@ -104,9 +104,9 @@ console.log(_numberone > _numbertwo ? _numberone : _numbertwo);
 /**  ● Write a conditional statement to sort three numbers
  *  ○ Example : num1 = 42, num2 = 27, num3 = 18 → 18, 27, 42
  */
-const _numone: number = 0;
-const _numtwo: number = 0;
-const _numthree: number = 0;
+const _numone: number = 42;
+const _numtwo: number = 27;
+const _numthree: number = 18;
 if (_numone < _numtwo && _numone < _numthree) {
   if (_numtwo < _numthree) {
     console.log(`${_numone}, ${_numtwo}, ${_numthree}`);
@@ -116,23 +116,49 @@ if (_numone < _numtwo && _numone < _numthree) {
 } else if (_numtwo < _numone && _numtwo < _numthree) {
   console.log(_numtwo);
   if (_numtwo < _numthree) {
-    console.log(_numtwo);
-    console.log(_numthree);
+    if (_numone > _numthree) {
+      console.log(_numthree);
+      console.log(_numone);
+    } else {
+      console.log(_numone);
+      console.log(_numthree);
+    }
   } else {
     console.log(_numthree);
     console.log(_numtwo);
   }
 } else if (_numthree < _numone && _numthree < _numtwo) {
-  console.log(_numone);
+  console.log(_numthree);
   if (_numtwo < _numthree) {
     console.log(_numtwo);
     console.log(_numthree);
   } else {
-    console.log(_numthree);
-    console.log(_numtwo);
+    if (_numtwo > _numone) {
+      console.log(_numone);
+      console.log(_numtwo);
+    } else {
+      console.log(_numtwo);
+      console.log(_numone);
+    }
   }
 } else {
-  console.log(`${_numone}, ${_numtwo}, ${_numthree}`);
+  if (_numone < _numtwo && _numone < _numthree) {
+    console.log(`${_numone}, ${_numtwo}, ${_numthree}`);
+  } else {
+    if (_numtwo < _numthree && _numtwo < _numone) {
+      console.log(`${_numtwo}, ${_numthree}, ${_numone}`);
+    } else {
+      if (_numone > _numtwo && _numone > _numthree) {
+        console.log(`${_numthree}, ${_numtwo}, ${_numone}`);
+      } else {
+        if (_numthree > _numone && _numthree > _numtwo) {
+          console.log(`${_numone}, ${_numtwo}, ${_numthree}`);
+        } else {
+          console.log(`${_numthree}, ${_numone}, ${_numtwo}`);
+        }
+      }
+    }
+  }
 }
 
 /**  ● Write a code that shows 1 if the input is a string, 2 if the input is a number, and 3 for others data
